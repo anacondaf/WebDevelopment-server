@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const mongoose = require("mongoose");
 
 const User = mongoose.model("User", { email: String, password: String });
 
@@ -18,6 +19,6 @@ router.post("/login", (req, res, next) => {
 	res.status(200).json({ msg: "Successful" });
 });
 
-router.post('register', );
+router.post("register");
 
 module.exports = router;

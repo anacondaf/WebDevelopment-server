@@ -6,7 +6,9 @@ const PORT = process.env.PORT || 8081;
 const api = require("./routes");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/test");
+mongoose.connect("mongodb://localhost:27017/test", () => {
+	console.log("DB Connected");
+});
 
 app.use(cors());
 app.use(express.json());
